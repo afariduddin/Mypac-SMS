@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MypacSMS.Pages
+namespace MypacSMS.Pages.Maintenance
 {
-    public class IndexModel : PageModel
+    public class UserAddModel : PageModel
     {
         public void OnGet()
         {
-            Redirect("/Login");
+
         }
     }
 }

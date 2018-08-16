@@ -1,0 +1,21 @@
+﻿@page
+@model MypacSMS.Pages.Maintenance.RolesModel
+
+@{
+    Layout = "~/Pages/Shared/_GridLayout.cshtml";
+}
+
+@(Html
+         .Grid(Model.Roles)
+         .Build( columns =>
+         {
+             columns.Add(model => model.Name).Titled("Role Name");
+             columns.Add(model => model.UpdateUser).Titled("Last Update By");
+             columns.Add(model => model.UpdateDatetime).Titled("Last Modified").Filterable(false);
+
+         })
+         .Empty("No data found")
+        .Filterable()
+        .Sortable()
+        .Pageable()
+)

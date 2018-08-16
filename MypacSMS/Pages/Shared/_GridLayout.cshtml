@@ -1,10 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
-
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -15,13 +11,15 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <link href="~/MvcGrid/mvc-grid.css" rel="stylesheet">
 </head>
 <body>
+    <h2>Test</h2>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Mypac</p>
+            <p>&copy; 2018 - MypacSMS</p>
         </footer>
     </div>
 
@@ -45,7 +43,10 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+    <script src="~/js/mvc-grid.js"></script>
+    <script>
+        $('.mvc-grid').mvcgrid();
+    </script>
 
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
